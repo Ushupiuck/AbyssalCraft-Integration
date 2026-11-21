@@ -1,3 +1,13 @@
-// GTNH repositories supplied through the convention plugin.
+// Scala 2.11's split-out modules are hosted on Maven Central rather than
+// the unreliable historical gregtech.overminddl1.com Maven endpoint.
+// The GTNH convention plugin supplies repositories for the remaining dependencies.
 repositories {
+    exclusiveContent {
+        forRepository {
+            mavenCentral()
+        }
+        filter {
+            includeGroup("org.scala-lang.modules")
+        }
+    }
 }

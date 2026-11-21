@@ -1,0 +1,17 @@
+// Forge 1.7.10's legacy Minecraft dependency metadata requests three Scala
+// components under org.scala-lang, but the released modules actually live at
+// org.scala-lang.modules. Redirect only these components, keeping their versions
+// unchanged. No dependency JARs are embedded or vendored.
+configurations.configureEach {
+    resolutionStrategy.eachDependency { details ->
+        if (details.requested.group == 'org.scala-lang' &&
+                details.requested.name in [
+                        'scala-parser-combinators_2.11',
+                        'scala-swing_2.11',
+                        'scala-xml_2.11'
+                ]) {
+            details.useTarget("org.scala-lang.modules:${details.requested.name}:${details.requested.version}")
+            details.because("Scala 2.11 modules were published under org.scala-lang.modules")
+        }
+    }
+}
