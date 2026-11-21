@@ -5,8 +5,8 @@
   				"modid": "acintegration",
   				"name": "AbyssalCraft Integration",
   				"description": "A mod that handles AbyssalCraft integrations.",
-  				"mcversion": "${mcversion}",
-  				"version": "${version}",
+  				"mcversion": "${minecraftVersion}",
+  				"version": "${modVersion}",
   				"authorList": [
   						"shinoow"
   				],

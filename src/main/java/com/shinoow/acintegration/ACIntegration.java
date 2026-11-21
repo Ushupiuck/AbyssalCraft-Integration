@@ -38,7 +38,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-@Mod(modid = ACIntegration.modid, name = ACIntegration.name, version = ACIntegration.version, dependencies = "required-after:Forge@[forgeversion,);required-after:abyssalcraft@[1.9.1.3,];after:Thaumcraft", useMetadata = false, guiFactory = "com.shinoow.acintegration.client.config.ACIGuiFactory")
+@Mod(modid = ACIntegration.modid, name = ACIntegration.name, version = ACIntegration.version, dependencies = "required-after:Forge@[10.13.4.1614,);required-after:abyssalcraft@[1.9.1.3,];after:Thaumcraft", useMetadata = false, guiFactory = "com.shinoow.acintegration.client.config.ACIGuiFactory")
 public class ACIntegration {
 
 	public static final String version = "1.4.7";
